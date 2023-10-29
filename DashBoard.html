@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwasthaEats</title>
+    <!-- Include Bootstrap CSS from a CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        #sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hidden */
+            overflow-y: scroll;
+            transition: all 0.3s; /* Smooth animation */
+        }
+        #content {
+            margin-left: 0;
+            padding: 20px;
+            transition: margin-left 0.3s; /* Smooth animation */
+        }
+        .sidebar-item {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+        }
+        .sidebar-item:hover {
+            background-color: #555;
+        }
+        #open-sidebar {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            z-index: 1; /* Display above the sidebar */
+        }
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #user-image {
+            position: absolute;
+            top: 10px;
+            right: 10px; /* Adjust the right property to position it to the extreme right */
+            width: 40px; /* Set the image width as needed */
+            height: 40px; /* Set the image height as needed */
+            border-radius: 50%; /* Make it circular */
+            object-fit: cover;
+            cursor: pointer;
+        }
+        #user-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 10px; /* Adjust the right property to align with the user image */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            z-index: 2;
+        }
+        #user-dropdown a {
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        .box-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: calc(33% - 20px); /* Set the width to one-third of the container width */
+            margin-bottom: 20px; /* Add margin between the boxes */
+            transition: background-image 0.3s; /* Smooth transition for image change */
+        }
+        .box img {
+            max-width: 100%; /* Ensure the image fits within the box */
+        }
+        .box:hover {
+            background-image: url('new-image-on-hover.jpg'); /* Change the image on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <a href="#" class="sidebar-item">SwasthaEats</a>
+        <a href="#" class="sidebar-item">Analytics</a>
+        <a href="#" class="sidebar-item">Reports</a>
+        <a href="#" class="sidebar-item">Settings</a>
+        <a href="#" class="sidebar-item">Logout</a>
+    </div>
+    <button id="open-sidebar">☰</button>
+    <img src="user-image.jpg" alt="User Image" id="user-image"> <!-- Replace with your user image source -->
+    <div id="content">
+        <div id="logo">SwasthaEats</div>
+        <div class="box-container">
+            <div class="box">
+                <img src="today-image.jpg" alt="Today">
+                <p>Today</p>
+            </div>
+            <div class="box">
+                <img src="food-image.jpg" alt="Food">
+                <p>Food</p>
+            </div>
+            <div class="box">
+                <img src="doctor-image.jpg" alt="Doctor">
+                <p>Doctor</p>
+            </div>
+            <div class="box">
+                <img src="yoga-fitness-image.jpg" alt="Yoga Fitness">
+                <p>Yoga Fitness</p>
+            </div>
+        </div>
+        <div id="user-dropdown">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Help</a>
+        </div>
+        <script>
+            // JavaScript to open/close the sidebar
+            document.getElementById("open-sidebar").addEventListener("click", function() {
+                const sidebar = document.getElementById("sidebar");
+                if (sidebar.style.left === "0px") {
+                    sidebar.style.left = "-250px";
+                    document.getElementById("content").style.marginLeft = "0";
+                } else {
+                    sidebar.style.left = "0px";
+                    document.getElementById("content").style.marginLeft = "250px";
+                }
+            });
+
+            // JavaScript to show/hide the user dropdown
+            const userImage = document.getElementById("user-image");
+            const userDropdown = document.getElementById("user-dropdown");
+
+            userImage.addEventListener("click", function(e) {
+                e.stopPropagation(); // Prevent closing when clicking on the user image
+                userDropdown.style.display = (userDropdown.style.display === "block") ? "none" : "block";
+            });
+
+            // Close the dropdown when clicking outside of it
+            document.addEventListener("click", function(e) {
+                if (e.target !== userImage && e.target !== userDropdown) {
+                    userDropdown.style.display = "none";
+                }
+            });
+        </script>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum augue vel justo tincidunt.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@swastheat.com<br>Phone: +1 (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Feedback</h3>
+                    <p>We'd love to hear from you! Send us your feedback at feedback@swastheat.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Include Bootstrap JS and jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Survey - Question 10</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light Blue Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #4a90e2; /* Dark Blue Text */
+        }
+
+        .form-check {
+            padding-left: 0;
+        }
+
+        .form-check-input {
+            width: 1.2em;
+            height: 1.2em;
+            margin-top: 0.2em;
+        }
+
+        .form-check-label {
+            margin-left: 2.5em;
+        }
+
+        .progress-bar {
+            background-color: #4a90e2; /* Dark Blue Progress Bar */
+        }
+
+        .btn-primary {
+            background-color: #4a90e2; /* Dark Blue Button */
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #357ebd; /* Slightly Darker Blue on Hover */
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Exercise Frequency</h2>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <form action="submit.html">
+            <div class="form-group">
+                <label>How often do you exercise?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exerciseFrequency" id="exercise1" value="Never">
+                    <label class="form-check-label" for="exercise1">
+                        Never
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exerciseFrequency" id="exercise2" value="Weekly">
+                    <label class="form-check-label" for="exercise2">
+                        Weekly
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exerciseFrequency" id="exercise3" value="Daily">
+                    <label class="form-check-label" for="exercise3">
+                        Daily
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
