@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Include Bootstrap CSS (you may need to adjust the path) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+        .login-box {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 login-box">
+                <h2 class="text-center">Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <a href="DashBoard.html" class="btn btn-primary btn-block">Login</a>
+                    <br><br><br>
+                    <div class="mt-3 text-center">
+                        <p>Don't have an account?</p>
+                        <a href="User.html" class="btn btn-info">Sign Up as User</a>
+                        <a href="Employee.html" class="btn btn-info">Sign Up as Employee</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (you may need to adjust the paths) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript to handle login form submission
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulate a successful login for demonstration purposes
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+
+            // Check the username and password (replace this with your authentication logic)
+            if (username === 'yourUsername' && password === 'yourPassword') {
+                // Redirect to the SwasthaEats page after successful login
+                window.location.href = 'swasthaeats.html'; // Update the URL as needed
+            } else {
+                // Handle login failure (e.g., display an error message)
+                alert('Login failed. Please check your credentials.');
+            }
+        });
+    </script>
+    
+</body>
+</html>

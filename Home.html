@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwasthaEats</title>
+    <!-- Include Bootstrap CSS from a CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        #header {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #slogan {
+            font-size: 18px;
+        }
+        #box-container {
+            margin-top: 20px;
+        }
+        #box-illustration {
+            width: 300px;
+            height: 200px;
+            background-color: #ccc;
+            float: right;
+        }
+        #action-button {
+            margin-top: 20px;
+        }
+        #trends-container {
+            margin-top: 40px;
+        }
+        .trend-image {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+        }
+        #feature-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 40px;
+        }
+        #footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 id="header">SwasthaEats</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <p id="slogan"><h3><B>Delicious and Healthy Food for You</B></h3></p>
+                </div>
+                <div id="box-container">
+                    
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="box-illustration">
+                    <!-- You can add your illustration here -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="trends-container">
+                    <h2>Trends</h2>
+                    <div id="trend-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <img class="trend-image img-fluid" src="trend1.jpg" alt="Trend 1">
+                                    </div>
+                                    <div class="col-6 col-sm-3">
+                                        <img class="trend-image img-fluid" src="trend2.jpg" alt="Trend 2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <img class="trend-image img-fluid" src="trend3.jpg" alt="Trend 3">
+                                    </div>
+                                    <div class="col-6 col-sm-3">
+                                        <img class="trend-image img-fluid" src="trend4.jpg" alt="Trend 4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#trend-carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#trend-carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div id="feature-box">
+                    <h2>Our Features</h2>
+                    <ul>
+                        <li>Healthy and Delicious Food Options</li>
+                        <li>Quick and Convenient Delivery</li>
+                        <li>Wide Range of Menu Choices</li>
+                        <li>Customizable Meals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum augue vel justo tincidunt.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@swastheat.com<br>Phone: +1 (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Feedback</h3>
+                    <p>We'd love to hear from you! Send us your feedback at feedback@swastheat.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include Bootstrap JS and jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
